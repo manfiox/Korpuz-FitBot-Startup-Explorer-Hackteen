@@ -7,16 +7,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="assets/style/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
-
-    <header class="cabecalho-principal">
+    <header class="cabecalho-principal cabecalho-fixo">
         <div class="container">
             <nav class="navegacao">
                 <a href="index.html">
                     <img src="img/logos/LogoKpzFL.png" alt="logo KpzFL" class="logo-nav">
                 </a>
-                <ul>
+                <ul class="menu-lista" id="menu-lista">
                     <li><a href="index.html" class="ativo">Início</a></li>
                     <li><a href="index.html#container-formulario">Korpuz Bot</a></li>
                     <li><a href="pages/sobre.html">Sobre Nós</a></li>
@@ -27,9 +28,28 @@
         </div>
     </header>
 
+    <div class="banner-carousel" id="banner-carousel">
+        <div class="banner-slide ativo">
+            <img class="banner-img" src="img/logos/LogoKorpuzFitLab.png" alt="Banner 1">
+            <div class="banner-legenda">Bem-vindo à Korpuz FitLab! Inovação e tecnologia para transformar sua saúde.</div>
+        </div>
+        <div class="banner-slide">
+            <img class="banner-img" src="img/logos/LogoKpzFL.png" alt="Banner 2">
+            <div class="banner-legenda">KorpuzBot: Seu personal virtual gratuito, feito por especialistas apaixonados por fitness.</div>
+        </div>
+        <div class="banner-slide">
+            <img class="banner-img" src="img/logos/Design sem nome (6).png" alt="Banner 3">
+            <div class="banner-legenda">Tecnologia, ciência e motivação para você alcançar seus objetivos!</div>
+        </div>
+        <div class="banner-controles">
+            <button class="banner-btn" id="banner-prev">&#10094;</button>
+            <button class="banner-btn" id="banner-next">&#10095;</button>
+        </div>
+    </div>
+
     <main class="conteudo-principal">
         <div class="container">
-            <div id="painel-informativo">
+            <div id="painel-informativo" data-aos="fade-up">
                 <div class="cartao">
                     <h1 class="titulo-gradiente">Sua Jornada Começa Agora!</h1>
                     <p class="texto-suporte">Receba um plano de treino e dieta gerado por IA e adaptado aos seus objetivos. É rápido, fácil e totalmente gratuito.</p>
@@ -54,7 +74,7 @@
                 </div>
             </div>
 
-            <div id="container-formulario">
+            <div id="container-formulario" data-aos="fade-up">
                 <div id="container-erro" class="container-erro oculto"></div>
                 <form id="formulario-plano" class="formulario">
                     <h2 class="titulo-formulario">Crie Seu Plano Agora</h2>
@@ -122,7 +142,7 @@
                 </form>
             </div>
 
-            <div class="secao-adicional">
+            <div class="secao-adicional" data-aos="fade-up">
                 <h2 class="titulo-gradiente" style="font-size: 2.5rem; text-align: center;">O que nossos usuários dizem</h2>
                 <div class="grid-cards-novos">
                     <div class="card-novo">
@@ -143,7 +163,7 @@
                 </div>
             </div>
 
-            <div class="secao-adicional">
+            <div class="secao-adicional" data-aos="fade-up">
                 <h2 class="titulo-gradiente" style="font-size: 2.5rem; text-align: center;"> Parceiros Korpuz</h2>
                 <div class="grid-cards-novos">
                     <div class="card-novo">
@@ -197,6 +217,55 @@
     </footer>
 
     <script src="assets/js/gerador.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        // Banner rotativo/carousel com animação de rolar
+        (function() {
+            const slides = document.querySelectorAll('.banner-slide');
+            let idx = 0;
+            let timer;
+            function goToSlide(newIdx, direction = 1) {
+                if (newIdx === idx) return;
+                const oldIdx = idx;
+                slides[oldIdx].classList.remove('ativo');
+                slides[oldIdx].classList.remove('saindo');
+                slides[oldIdx].offsetWidth; // reflow
+                slides[oldIdx].classList.add('saindo');
+                slides[newIdx].classList.add('ativo');
+                setTimeout(() => {
+                    slides[oldIdx].classList.remove('saindo');
+                }, 700);
+                idx = newIdx;
+            }
+            function nextSlide() {
+                let next = (idx + 1) % slides.length;
+                goToSlide(next, 1);
+            }
+            function prevSlide() {
+                let prev = (idx - 1 + slides.length) % slides.length;
+                goToSlide(prev, -1);
+            }
+            document.getElementById('banner-prev').onclick = function(e) {
+                e.stopPropagation();
+                prevSlide();
+                resetTimer();
+            };
+            document.getElementById('banner-next').onclick = function(e) {
+                e.stopPropagation();
+                nextSlide();
+                resetTimer();
+            };
+            function resetTimer() {
+                clearInterval(timer);
+                timer = setInterval(nextSlide, 5000);
+            }
+            timer = setInterval(nextSlide, 5000);
+        })();
+    </script>
 </body>
 </html>
 

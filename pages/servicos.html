@@ -6,18 +6,24 @@
     <title>Serviços - ManfioBot</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/style/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
-    <header class="cabecalho-principal">
+    <header class="cabecalho-principal cabecalho-fixo">
         <div class="container">
             <nav class="navegacao">
-                <a href="index.html">
-                <img src=".../img/logos/LogoKpzFL.png" alt="logo KpzFL" class="logo-nav"></a>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="index.html#container-formulario">Korpuz Bot</a></li>
+                <a href="../index.html">
+                    <img src="../img/logos/LogoKpzFL.png" alt="logo KpzFL" class="logo-nav">
+                </a>
+                <div class="menu-hamburguer" id="menu-hamburguer">
+                    <span></span><span></span><span></span>
+                </div>
+                <ul class="menu-lista" id="menu-lista">
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../index.html#container-formulario">Korpuz Bot</a></li>
                     <li><a href="sobre.html">Sobre Nós</a></li>
-                    <li><a href="servicos.html" class="ativo">Serviços</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
             </nav>
@@ -26,15 +32,15 @@
 
     <main class="conteudo-principal">
         <div class="container">
-            <div class="cartao" style="text-align: center;">
+            <div class="cartao" style="text-align: center;" data-aos="fade-up">
                 <h1 class="titulo-gradiente">Nossos Planos e Serviços</h1>
                 <p class="texto-suporte">Oferecemos desde uma ferramenta gratuita para você começar até um acompanhamento completo para maximizar seus resultados.</p>
             </div>
-            <div class="grid-servicos">
+            <div class="grid-servicos" data-aos="fade-up">
                 <div class="cartao-servico">
                     <h3>Plano Gratuito (KorpuzBot)</h3>
                     <p>Gere um plano de treino e dieta inicial, baseado em seus dados e objetivos. Perfeito para dar o primeiro passo.</p>
-                    <a href="index.html" class="botao-servico">Comece Agora</a>
+                    <a href="../index.html" class="botao-servico">Comece Agora</a>
                 </div>
                 <div class="cartao-servico">
                     <h3>Plano Premium</h3>
@@ -48,7 +54,7 @@
     <footer class="rodape-principal">
         <div class="container conteudo-rodape">
             <div class="info-rodape">
-                <img src="LogoKorpuzFitLab.png" alt="logo Korpuz FitLab" class="logo-rodape">
+                <img src="../img/logos/LogoKorpuzFitLab.png" alt="logo Korpuz FitLab" class="logo-rodape">
                 <p>Transformando vidas através do fitness</p>
             </div>
             <div class="redes-sociais-rodape">
@@ -71,5 +77,19 @@
             <p>Este serviço não substitui orientação profissional. Consulte um médico.</p>
         </div>
     </footer>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        // Menu hamburguer responsivo
+        const menuHamburguer = document.getElementById('menu-hamburguer');
+        const menuLista = document.getElementById('menu-lista');
+        menuHamburguer.addEventListener('click', function() {
+            menuLista.classList.toggle('aberto');
+            menuHamburguer.classList.toggle('ativo');
+        });
+    </script>
 </body>
 </html>

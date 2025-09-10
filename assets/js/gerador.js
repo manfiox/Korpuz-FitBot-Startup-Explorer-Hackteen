@@ -29,6 +29,35 @@ document.addEventListener('DOMContentLoaded', () => {
         return true;
     }
 
+    function getExercicioImg(nome) {
+        const mapa = {
+            'Supino Reto': 'img/exercicios/supino_reto.png',
+            'Supino Inclinado': 'img/exercicios/supino_inclinado.png',
+            'Supino Inclinado c/ Halteres': 'img/exercicios/supino_inclinado.png',
+            'Flexão de Braço': 'img/exercicios/flexao.png',
+            'Flexão na Paralela': 'img/exercicios/flexao_paralela.png',
+            'Puxada Frontal': 'img/exercicios/puxada_frontal.png',
+            'Remada Curvada': 'img/exercicios/remada_curvada.png',
+            'Rosca Direta': 'img/exercicios/rosca_direta.png',
+            'Tríceps Polia': 'img/exercicios/triceps_polia.png',
+            'Tríceps Corda': 'img/exercicios/triceps_corda.png',
+            'Agachamento Livre': 'img/exercicios/agachamento.png',
+            'Leg Press': 'img/exercicios/leg_press.png',
+            'Leg Press 45º': 'img/exercicios/leg_press.png',
+            'Cadeira Extensora': 'img/exercicios/extensora.png',
+            'Mesa Flexora': 'img/exercicios/flexora.png',
+            'Desenvolvimento c/ Halteres': 'img/exercicios/desenvolvimento.png',
+            'Desenvolvimento Militar': 'img/exercicios/desenvolvimento.png',
+            'Desenvolvimento Arnold': 'img/exercicios/desenvolvimento.png',
+            'Elevação Lateral': 'img/exercicios/elevacao_lateral.png',
+            'Abdominal Supra': 'img/exercicios/abdominal.png',
+            'Prancha': 'img/exercicios/prancha.png',
+            'Cardio': 'img/exercicios/cardio.png',
+            // ...adicione mais conforme necessário...
+        };
+        return mapa[nome] || 'img/exercicios/padrao.png';
+    }
+
     function gerarHtmlTreino(treinoData) {
         if (!treinoData || !treinoData.planoBase) return '<p>Plano de treino não disponível.</p>';
         const { divisao, planoBase } = treinoData;
@@ -37,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="plano-dia">
                 <h4><span class="material-symbols-outlined icone-lista-resultado">calendar_month</span>${dia.dia}</h4>
                 <ul>
-                    ${dia.exercicios.map(ex => `<li class="exercicio-item"><span class="exercicio-nome">${ex.nome}</span><span class="exercicio-reps">${ex.reps}</span></li>`).join('')}
+                    ${dia.exercicios.map(ex => `<li class="exercicio-item"><img class="exercicio-img" src="${getExercicioImg(ex.nome)}" alt="${ex.nome}"><span class="exercicio-nome">${ex.nome}</span><span class="exercicio-reps">${ex.reps}</span></li>`).join('')}
                 </ul>
             </div>
         `).join('');
