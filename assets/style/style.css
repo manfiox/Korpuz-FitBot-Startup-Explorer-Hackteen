@@ -91,7 +91,11 @@ body { padding-top: 90px; }
 
 /* --- NAVEGAÇÃO --- */
 .navegacao { display: flex; justify-content: space-between; align-items: center; }
+<<<<<<< HEAD
 .logo-nav { max-width: 250px;  filter: contrast(0%) brightness(1000%);}
+=======
+.logo-nav { max-width: 250px;  filter: contrast(0%) brightness(1000%); margin-bottom: -15px;}
+>>>>>>> 96441580e6835f56b1564f2588eea3aa79159dd4
 .navegacao ul { list-style: none; display: flex; gap: 1.5rem; padding-left: 0; }
 .navegacao a { text-decoration: none; color: var(--cor-texto-suporte); font-weight: 500; padding-bottom: 5px; border-bottom: 2px solid transparent; transition: all 0.3s ease; }
 .navegacao a:hover { color: white; }
