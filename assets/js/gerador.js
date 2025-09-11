@@ -53,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
             'Abdominal Supra': 'img/exercicios/abdominal.png',
             'Prancha': 'img/exercicios/prancha.png',
             'Cardio': 'img/exercicios/cardio.png',
-            // ...adicione mais conforme necessário...
         };
         return mapa[nome] || 'img/exercicios/padrao.png';
     }
