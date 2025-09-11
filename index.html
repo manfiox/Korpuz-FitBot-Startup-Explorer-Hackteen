@@ -30,15 +30,15 @@
 
     <div class="banner-carousel" id="banner-carousel">
         <div class="banner-slide ativo">
-            <img class="banner-img" src="img/logos/LogoKorpuzFitLab.png" alt="Banner 1">
+            <img class="banner-img" src="img/logos/limites.png" alt="Banner 1">
             <div class="banner-legenda">Bem-vindo à Korpuz FitLab! Inovação e tecnologia para transformar sua saúde.</div>
         </div>
         <div class="banner-slide">
-            <img class="banner-img" src="img/logos/LogoKpzFL.png" alt="Banner 2">
-            <div class="banner-legenda">KorpuzBot: Seu personal virtual gratuito, feito por especialistas apaixonados por fitness.</div>
+            <img class="banner-img" src="img/logos/Mais suor.png" alt="Banner 2">
+            <div class="banner-legenda">Você não precisa ser perfeito. Precisa ser constante.</div>
         </div>
         <div class="banner-slide">
-            <img class="banner-img" src="img/logos/Design sem nome (6).png" alt="Banner 3">
+            <img class="banner-img" src="img/logos/saudebanner.png" alt="Banner 3">
             <div class="banner-legenda">Tecnologia, ciência e motivação para você alcançar seus objetivos!</div>
         </div>
         <div class="banner-controles">
@@ -227,9 +227,11 @@
         (function() {
             const slides = document.querySelectorAll('.banner-slide');
             let idx = 0;
+            let animating = false;
             let timer;
-            function goToSlide(newIdx, direction = 1) {
-                if (newIdx === idx) return;
+            function goToSlide(newIdx) {
+                if (newIdx === idx || animating) return;
+                animating = true;
                 const oldIdx = idx;
                 slides[oldIdx].classList.remove('ativo');
                 slides[oldIdx].classList.remove('saindo');
@@ -238,16 +240,17 @@
                 slides[newIdx].classList.add('ativo');
                 setTimeout(() => {
                     slides[oldIdx].classList.remove('saindo');
+                    animating = false;
                 }, 700);
                 idx = newIdx;
             }
             function nextSlide() {
                 let next = (idx + 1) % slides.length;
-                goToSlide(next, 1);
+                goToSlide(next);
             }
             function prevSlide() {
                 let prev = (idx - 1 + slides.length) % slides.length;
-                goToSlide(prev, -1);
+                goToSlide(prev);
             }
             document.getElementById('banner-prev').onclick = function(e) {
                 e.stopPropagation();
