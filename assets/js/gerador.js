@@ -31,28 +31,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function getExercicioImg(nome) {
         const mapa = {
-            'Supino Reto': 'img/exercicios/supino_reto.png',
-            'Supino Inclinado': 'img/exercicios/supino_inclinado.png',
-            'Supino Inclinado c/ Halteres': 'img/exercicios/supino_inclinado.png',
-            'Flexão de Braço': 'img/exercicios/flexao.png',
-            'Flexão na Paralela': 'img/exercicios/flexao_paralela.png',
-            'Puxada Frontal': 'img/exercicios/puxada_frontal.png',
-            'Remada Curvada': 'img/exercicios/remada_curvada.png',
-            'Rosca Direta': 'img/exercicios/rosca_direta.png',
-            'Tríceps Polia': 'img/exercicios/triceps_polia.png',
-            'Tríceps Corda': 'img/exercicios/triceps_corda.png',
-            'Agachamento Livre': 'img/exercicios/agachamento.png',
-            'Leg Press': 'img/exercicios/leg_press.png',
-            'Leg Press 45º': 'img/exercicios/leg_press.png',
-            'Cadeira Extensora': 'img/exercicios/extensora.png',
-            'Mesa Flexora': 'img/exercicios/flexora.png',
-            'Desenvolvimento c/ Halteres': 'img/exercicios/desenvolvimento.png',
-            'Desenvolvimento Militar': 'img/exercicios/desenvolvimento.png',
-            'Desenvolvimento Arnold': 'img/exercicios/desenvolvimento.png',
-            'Elevação Lateral': 'img/exercicios/elevacao_lateral.png',
-            'Abdominal Supra': 'img/exercicios/abdominal.png',
-            'Prancha': 'img/exercicios/prancha.png',
-            'Cardio': 'img/exercicios/cardio.png',
+            'Supino Reto': 'img/exercicios/supino_reto.png.jpg',
+            'Supino Inclinado': 'img/exercicios/supino_inclinado.png.jpg',
+            'Supino Inclinado c/ Halteres': 'img/exercicios/supino_inclinado.png.jpg',
+            'Flexão de Braço': 'img/exercicios/flexao.png.jpg',
+            'Flexão na Paralela': 'img/exercicios/flexao_paralela.png.gif',
+            'Puxada Frontal': 'img/exercicios/puxada_frontal.png.jpg',
+            'Remada Curvada': 'img/exercicios/remada_curvada.png.jpg',
+            'Rosca Direta': 'img/exercicios/rosca_direta.png.jpg',
+            'Tríceps Polia': 'img/exercicios/triceps_polia.png.jpg',
+            'Tríceps Corda': 'img/exercicios/triceps_corda.png.jpg',
+            'Agachamento Livre': 'img/exercicios/agachamento.png.jpg',
+            'Leg Press': 'img/exercicios/leg_press.png.jpg',
+            'Leg Press 45º': 'img/exercicios/leg_press.png.jpg',
+            'Cadeira Extensora': 'img/exercicios/extensora.png.jpg',
+            'Mesa Flexora': 'img/exercicios/flexora.png.gif',
+            'Desenvolvimento c/ Halteres': 'img/exercicios/desenvolvimento.png.webp',
+            'Desenvolvimento Militar': 'img/exercicios/desenvolvimento.png.webp',
+            'Desenvolvimento Arnold': 'img/exercicios/desenvolvimento.png.webp',
+            'Elevação Lateral': 'img/exercicios/elevacao_lateral.png.jpg',
+            'Abdominal Supra': 'img/exercicios/abdominal.png.jpg',
+            'Prancha': 'img/exercicios/prancha.png.gif',
+            'Cardio': 'img/exercicios/cardio.png.jpg',
         };
         return mapa[nome] || 'img/exercicios/padrao.png';
     }
@@ -65,10 +65,21 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="plano-dia">
                 <h4><span class="material-symbols-outlined icone-lista-resultado">calendar_month</span>${dia.dia}</h4>
                 <ul>
-                    ${dia.exercicios.map(ex => `<li class="exercicio-item"><img class="exercicio-img" src="${getExercicioImg(ex.nome)}" alt="${ex.nome}"><span class="exercicio-nome">${ex.nome}</span><span class="exercicio-reps">${ex.reps}</span></li>`).join('')}
+                    ${dia.exercicios.map(ex => `<li class="exercicio-item"><img class="exercicio-img efeito-ampliar" src="${getExercicioImg(ex.nome)}" alt="${ex.nome}"><span class="exercicio-nome">${ex.nome}</span><span class="exercicio-reps">${ex.reps}</span></li>`).join('')}
                 </ul>
             </div>
         `).join('');
+    // Efeito de ampliar imagem ao clicar no mobile
+    document.body.addEventListener('click', function(e) {
+        if (e.target.classList.contains('efeito-ampliar')) {
+            // Remove a classe ampliada de todas as imagens
+            document.querySelectorAll('.exercicio-img.efeito-ampliar.ampliada').forEach(img => img.classList.remove('ampliada'));
+            // Adiciona na imagem clicada
+            e.target.classList.add('ampliada');
+            // Remove após 1.2s
+            setTimeout(() => e.target.classList.remove('ampliada'), 1200);
+        }
+    });
 
         const dicasHtml = `<div class="plano-dicas"><h4><span class="material-symbols-outlined icone-google">lightbulb</span>Dicas Importantes</h4><p>${planoBase.dicas}</p></div>`;
         return `<div class="plano-divisao">${divisao.titulo}<br><small>${divisao.schema}</small></div>${diasHtml}${dicasHtml}`;
