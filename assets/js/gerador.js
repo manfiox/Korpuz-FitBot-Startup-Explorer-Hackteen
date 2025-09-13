@@ -142,7 +142,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 <div class="observacao-personalizacao">
                     <p><strong>Importante:</strong> Este plano é gerado com base nas suas informações, mas nós também oferecemos um plano realmente personalizado e com acompanhamento profissional!</p>
-                    <button id="botao-saiba-mais" class="botao-principal botao-saiba-mais"><span class="material-symbols-outlined">info</span>Saiba Mais</button>
+                   <a href="https://wa.me/5515997262538?text=Olá, vim pelo Korpuz Bot e queria saber mais sobre os serviços" id="botao-saiba-mais" class="btn btn-primary d-inline-flex align-items-center">
+  <span class="material-symbols-outlined me-1">info</span>
+  Saiba Mais
+</a>
+
                 </div>
             </div>`;
         

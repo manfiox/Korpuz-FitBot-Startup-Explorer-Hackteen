@@ -6,43 +6,98 @@
     <title>Serviços - ManfioBot</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/style/style.css">
+    <style>
+        /* Navbar custom translucida e responsiva igual index.html */
+        .navbar-custom {
+            background: rgba(0,0,0,0.55) !important;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 24px rgba(161,4,4,0.18);
+            border-bottom: 1.5px solid rgba(255,255,255,0.08);
+            transition: background 0.3s, box-shadow 0.3s;
+        }
+        .navbar-custom .navbar-brand img {
+            filter: none !important;
+            /* Garante logo branca */
+            filter: brightness(0) invert(1) !important;
+        }
+        .navbar-custom .navbar-nav .nav-link {
+            color: #fff !important;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            padding: 0.7rem 1.2rem;
+            border-radius: 2rem;
+            transition: background 0.2s, color 0.2s;
+        }
+        .navbar-custom .navbar-nav .nav-link.ativo,
+        .navbar-custom .navbar-nav .nav-link.active,
+        .navbar-custom .navbar-nav .nav-link:hover {
+            background: rgba(255,0,0,0.18);
+            color: #fff !important;
+        }
+        .navbar-custom .navbar-toggler {
+            border: none;
+            background: rgba(255,255,255,0.08);
+            border-radius: 50%;
+            padding: 0.5rem 0.7rem;
+            transition: background 0.2s;
+        }
+        .navbar-custom .navbar-toggler:focus {
+            outline: none;
+            background: rgba(255,0,0,0.18);
+        }
+        @media (max-width: 991.98px) {
+            .navbar-custom .navbar-collapse {
+                background: rgba(0,0,0,0.92);
+                backdrop-filter: blur(16px);
+                border-radius: 1.2rem;
+                margin-top: 0.7rem;
+                box-shadow: 0 8px 32px rgba(161,4,4,0.18);
+                padding: 1.2rem 0.5rem;
+            }
+            .navbar-custom .navbar-nav .nav-link {
+                margin-bottom: 0.7rem;
+                text-align: center;
+            }
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
-    <header class="cabecalho-principal cabecalho-fixo">
-        <div class="container">
-            <nav class="navegacao">
-                <a href="../index.html">
-                    <img src="../img/logos/LogoKpzFL.png" alt="logo KpzFL" class="logo-nav">
-                </a>
-                <div class="menu-hamburguer" id="menu-hamburguer">
-                    <span></span><span></span><span></span>
-                </div>
-                <ul class="menu-lista" id="menu-lista">
-                    <li><a href="../index.html">Início</a></li>
-                    <li><a href="../index.html#container-formulario">Korpuz Bot</a></li>
-                    <li><a href="sobre.html">Sobre Nós</a></li>
-                    <li><a href="servicos.html">Serviços</a></li>
-                    <li><a href="contato.html">Contato</a></li>
+    <nav class="navbar navbar-expand-lg navbar-custom navbar-dark fixed-top">
+        <div class="container p-2 d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../img/logos/LogoKpzFL.png" alt="logo KpzFL" class="logo-nav" style="height:40px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#container-formulario">Korpuz Bot</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nós</a></li>
+                    <li class="nav-item"><a class="nav-link ativo" href="servicos.html">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
                 </ul>
-            </nav>
+            </div>
         </div>
-    </header>
+    </nav>
 
     <main class="conteudo-principal">
         <div class="container">
             <div class="cartao" style="text-align: center;" data-aos="fade-up">
-                <h1 class="titulo-gradiente">Nossos Planos e Serviços</h1>
-                <p class="texto-suporte">Oferecemos desde uma ferramenta gratuita para você começar até um acompanhamento completo para maximizar seus resultados.</p>
+                <h1 class="titulo-gradiente" data-aos="fade-down" data-aos-delay="100">Nossos Planos e Serviços</h1>
+                <p class="texto-suporte" data-aos="fade-down" data-aos-delay="200">Oferecemos desde uma ferramenta gratuita para você começar até um acompanhamento completo para maximizar seus resultados.</p>
             </div>
             <div class="grid-servicos" data-aos="fade-up">
-                <div class="cartao-servico">
+                <div class="cartao-servico animacao-hover" data-aos="zoom-in" data-aos-delay="300">
                     <h3>Plano Gratuito (KorpuzBot)</h3>
                     <p>Gere um plano de treino e dieta inicial, baseado em seus dados e objetivos. Perfeito para dar o primeiro passo.</p>
                     <a href="../index.html" class="botao-servico">Comece Agora</a>
                 </div>
-                <div class="cartao-servico">
+                <div class="cartao-servico animacao-hover" data-aos="zoom-in" data-aos-delay="500">
                     <h3>Plano Premium</h3>
                     <p>Um plano 100% personalizado, com acompanhamento semanal e ajustes conforme sua evolução (Serviço futuro).</p>
                     <a href="contato.html" class="botao-servico">Saiba Mais</a>
@@ -77,6 +132,7 @@
             <p>Este serviço não substitui orientação profissional. Consulte um médico.</p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         AOS.init({
             duration: 800,
