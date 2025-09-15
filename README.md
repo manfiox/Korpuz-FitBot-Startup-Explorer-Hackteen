@@ -14,7 +14,7 @@
 
 ## 👥 Integrantes da Equipe  
 
-- **Caio Manfio**  
+- **Caio Tavuencas Manfio**  
 
 - **Kevyn Correia**  
 
