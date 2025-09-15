@@ -30,7 +30,7 @@
 
 
 
-O **ManfioBot** é uma **startup acadêmica inovadora** que tem como principal objetivo **democratizar o acesso à saúde e ao fitness por meio da tecnologia**.  
+O **KorpuzBot** é uma **startup acadêmica inovadora** que tem como principal objetivo **democratizar o acesso à saúde e ao fitness por meio da tecnologia**.  
 
 
 
@@ -38,7 +38,7 @@ Muitas pessoas desejam melhorar sua qualidade de vida através da prática de ex
 
 
 
-O ManfioBot surge como uma alternativa prática, gratuita e acessível: um **personal trainer virtual** que gera **planos de treino e dieta personalizados**, levando em conta características individuais como **idade, peso, altura, objetivos e nível de experiência**.  
+O KorpuzBot surge como uma alternativa prática, gratuita e acessível: um **personal trainer virtual** que gera **planos de treino e dieta personalizados**, levando em conta características individuais como **idade, peso, altura, objetivos e nível de experiência**.  
 
 
 
@@ -72,7 +72,7 @@ Com isso, buscamos **transformar o cuidado com o corpo e a saúde em algo mais a
 
 
 
-O **ManfioBot** cria planos de treino e alimentação sob medida, baseados nas informações fornecidas pelo usuário. 
+O **KorpuzBot** cria planos de treino e alimentação sob medida, baseados nas informações fornecidas pelo usuário. 
 
 
 
