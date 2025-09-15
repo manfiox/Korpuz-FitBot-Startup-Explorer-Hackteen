@@ -13,7 +13,6 @@
 - [Descrição do Projeto](#descrição-do-projeto)
 - [Problema Identificado](#problema-identificado)
 - [Solução Proposta](#solução-proposta)
-- [Demonstração](#demonstração)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Instruções de Setup](#instruções-de-setup)
 - [Licença](#licença)
@@ -73,10 +72,17 @@ Nosso compromisso é **oferecer saúde e bem-estar de forma inclusiva**, alcanç
 
 ## 🛠 Tecnologias Utilizadas
 
-- HTML5
-- CSS3
-- JavaScript
-- Bootstrap
+- HTML5 – Estrutura das páginas.
+- CSS3 – Estilização, incluindo responsividade.
+- JavaScript (puro/vanilla) – Scripts customizados para funcionalidades do site.
+- Bootstrap 5 – Framework CSS para layout responsivo e componentes prontos.
+- Google Fonts (Poppins) – Fonte personalizada via CDN.
+- Material Symbols (Google) – Ícones via CDN.
+- AOS (Animate On Scroll) – Biblioteca de animação ao rolar a página.
+- SVG – Ícones de redes sociais embutidos no HTML.
+- Imagens em diversos formatos (JPG, PNG, GIF, WEBP) – Para banners, logos, cards, etc.
+- Meta viewport – Para responsividade em dispositivos móveis.
+- Classes utilitárias do Bootstrap – Para espaçamento, grid, alinhamento, etc.
 
 ---
 
