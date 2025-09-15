@@ -1,8 +1,7 @@
 # 🏋️‍♂️ KorpuzBot - Personal Trainer Virtual
 
-![License](https://img.shields.io/github/license/manfiox/Korpuz-FitBot-Startup-Explorer-Hackteen)
-![GitHub last commit](https://img.shields.io/github/last-commit/manfiox/Korpuz-FitBot-Startup-Explorer-Hackteen)
-![Repository size](https://img.shields.io/github/repo-size/manfiox/Korpuz-FitBot-Startup-Explorer-Hackteen)
+[![GitHub last commit](https://img.shields.io/github/last-commit/manfiox/Korpuz-FitBot-Startup-Explorer-Hackteen)](https://github.com/manfiox/Korpuz-FitBot-Startup-Explorer-Hackteen/commits)
+[![Repository size](https://img.shields.io/github/repo-size/manfiox/Korpuz-FitBot-Startup-Explorer-Hackteen)](https://github.com/manfiox/Korpuz-FitBot-Startup-Explorer-Hackteen)
 
 ---
 
@@ -15,7 +14,7 @@
 - [Solução Proposta](#solução-proposta)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Instruções de Setup](#instruções-de-setup)
-- [Licença](#licença)
+- [Aviso de Direitos Autorais](#aviso-de-direitos-autorais)
 - [Contato](#contato)
 - [Agradecimentos](#agradecimentos)
 
@@ -109,9 +108,9 @@ Pronto! O site estará rodando localmente e você poderá explorar todas as func
 
 ---
 
-## 📝 Licença
+## ⚠️ Aviso de Direitos Autorais
 
-Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto é proprietário. Nenhum uso, cópia, modificação ou distribuição é permitido sem autorização expressa do autor.
 
 ---
 
