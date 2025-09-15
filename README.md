@@ -16,7 +16,6 @@
 - [Demonstração](#demonstração)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Instruções de Setup](#instruções-de-setup)
-- [Como Contribuir](#como-contribuir)
 - [Licença](#licença)
 - [Contato](#contato)
 - [Agradecimentos](#agradecimentos)
@@ -113,7 +112,7 @@ Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICE
 ## 📫 Contato
 
 Dúvidas, sugestões ou problemas?  
-Abra uma [issue](https://github.com/manfiox/Korpuz-FitBot-Startup-Explorer-Hackteen/issues) ou envie um e-mail para **caio.manfio@exemplo.com**.
+Abra uma [issue](https://github.com/manfiox/Korpuz-FitBot-Startup-Explorer-Hackteen/issues) ou envie um e-mail para **zc4i0manfio@gmail.com**.
 
 ---
 
