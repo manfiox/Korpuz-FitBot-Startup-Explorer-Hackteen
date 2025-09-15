@@ -1,4 +1,4 @@
-# 🏋️‍♂️ ManfioBot - Personal Trainer Virtual  
+# 🏋️‍♂️ KorpuzBot - Personal Trainer Virtual  
 
 
 
