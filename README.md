@@ -4,7 +4,7 @@
 
 ## 📌 Instituição  
 
-**ETEC de São Paulo**  
+**ETEC Prof° Elias Miguel Júnior - Votorantim-SP**  
 
 
 
@@ -72,7 +72,7 @@ Com isso, buscamos **transformar o cuidado com o corpo e a saúde em algo mais a
 
 
 
-O **ManfioBot** utiliza **algoritmos de inteligência artificial** para criar planos de treino e alimentação sob medida, baseados nas informações fornecidas pelo usuário.  
+O **ManfioBot** cria planos de treino e alimentação sob medida, baseados nas informações fornecidas pelo usuário. 
 
 
 
@@ -95,16 +95,23 @@ Nosso compromisso é **oferecer saúde e bem-estar de forma inclusiva**, alcanç
 ---
 ## ⚙️ Instruções de Setup  
 
-Para utilizar o projeto, siga os passos:  
+Para rodar o site localmente na sua máquina:
 
-1. **Baixar o projeto completo**  
-   - Via **SSH** ou  
-   - Via **ZIP** diretamente do repositório.  
+1. **Clone ou baixe o repositório:**
+   - Clique em "Code" e depois em "Download ZIP" para baixar, ou use o comando:
+     ```bash
+     git clone https://github.com/manfiox/Korpuz-FitBot-Startup-Explorer-Hackteen.git
+     ```
+   - Extraia o ZIP (se baixou como ZIP) ou acesse a pasta clonada.
 
-2. **Executar o projeto**  
-   - Localize o arquivo **`index.html`** na pasta do projeto.  
-   - Clique **duas vezes** sobre ele para abrir no navegador de sua preferência.  
+2. **Abra a pasta do projeto:**
+   - Você pode abrir a pasta no VS Code, ou simplesmente navegar até ela pelo seu gerenciador de arquivos.
 
-✅ Agora você já pode explorar o **Open Web** e começar sua jornada como desenvolvedor com mais clareza e segurança.  
+3. **Execute o site:**
+   - Procure o arquivo **`index.html`** na raiz do projeto.
+   - Clique duas vezes sobre ele para abrir no seu navegador (Chrome, Edge, Firefox, etc).
+   - **Dica:** Para melhor compatibilidade, você pode usar uma extensão de servidor local, como "Live Server" do VS Code.
+
+Pronto! O site estará rodando localmente e você poderá explorar todas as funcionalidades.
 
 ---

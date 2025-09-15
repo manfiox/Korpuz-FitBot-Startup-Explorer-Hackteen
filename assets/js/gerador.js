@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 <div class="observacao-personalizacao">
                     <p><strong>Importante:</strong> Este plano é gerado com base nas suas informações, mas nós também oferecemos um plano realmente personalizado e com acompanhamento profissional!</p>
-                   <a href="https://wa.me/5515997262538?text=Olá, vim pelo Korpuz Bot e queria saber mais sobre os serviços" id="botao-saiba-mais" class="btn btn-primary d-inline-flex align-items-center">
+                   <a href="https://wa.me/5515997262538?text=E aí! Recebi o meu plano de treino e dieta pelo Korpuz Bot e quero conhecer melhor os planos e serviços da Korpuz Fit Lab." class="btn btn-primary d-inline-flex align-items-center">
   <span class="material-symbols-outlined me-1">info</span>
   Saiba Mais
 </a>
